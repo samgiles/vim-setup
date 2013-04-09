@@ -1,4 +1,5 @@
-call pathogen#infect()
+set nocp
+execute pathogen#infect()
 syntax enable
 
 " Change to light to change to solarized light
