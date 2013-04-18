@@ -17,6 +17,10 @@ set completeopt+=preview
 let g:phpqa_codesniffer_args = "--standard=Assanka"
 let g:phpqa_messdetector_ruleset = "~/bin/phpmd-src/phpmd.xml"
 
+" Disable markdown folding
+let g:vim_markdown_folding_disabled=1
+
+
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
