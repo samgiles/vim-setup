@@ -30,3 +30,6 @@ nmap <F4> :TagbarToggle<CR>
 nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
+
+set spelllang=en_gb
+set spell
