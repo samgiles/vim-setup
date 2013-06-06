@@ -1,4 +1,6 @@
 set nocp
+let g:loaded_syntastic_php_phpcs_checker=1
+let g:loaded_syntastic_php_phpmd_checker=1
 execute pathogen#infect()
 syntax enable
 
@@ -25,7 +27,6 @@ let g:vim_markdown_folding_disabled=1
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nu
-
 nmap <F4> :TagbarToggle<CR>
 nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
