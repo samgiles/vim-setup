@@ -30,6 +30,15 @@ nmap <F4> :TagbarToggle<CR>
 nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
+nmap <F1> <Esc>
+nnoremap ; :
 
 set spelllang=en_gb
 set spell
+
+" Learn vi properly
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
