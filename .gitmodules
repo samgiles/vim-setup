@@ -49,3 +49,9 @@
 [submodule "bundle/ensime"]
 	path = bundle/ensime
 	url = git://github.com/aemoncannon/ensime.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/plasticboy/vim-markdown.git
