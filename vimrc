@@ -32,7 +32,6 @@ nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
 nmap <F1> <Esc>
-nnoremap ; :
 
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
@@ -55,9 +54,16 @@ set fileencoding=utf-8
 set spelllang=en_gb
 set spell
 
+noremap <Space> <Return>
+noremap ' :
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+
 " Learn vi properly
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-inoremap <up> <nop>
+noremap <up> <nop>
