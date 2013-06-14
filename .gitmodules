@@ -28,3 +28,24 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "bundle/vimshell"]
+	path = bundle/vimshell
+	url = https://github.com/Shougo/vimshell
+[submodule "bundle/vimside"]
+	path = bundle/vimside
+	url = git://github.com/megaannum/vimside.git
+[submodule "bundle/self"]
+	path = bundle/self
+	url = git://github.com/megaannum/self.git
+[submodule "bundle/forms"]
+	path = bundle/forms
+	url = git://github.com/megaannum/forms.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = git://github.com/Shougo/vimproc.git
+[submodule "bundle/ensime"]
+	path = bundle/ensime
+	url = git://github.com/aemoncannon/ensime.git
