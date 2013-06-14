@@ -26,3 +26,21 @@ nmap <F4> :TagbarToggle<CR>
 nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
+
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Use camel case completion.
+let g:neocomplcache_enable_camel_case_completion = 1
+" Use underscore completion.
+let g:neocomplcache_enable_underbar_completion = 1
+" Sets minimum char length of syntax keyword.
+let g:neocomplcache_min_syntax_length = 2
+
+set tabstop=8
+set shiftwidth=8
+set smarttab
+set expandtab
+
+set bomb
+set fileencoding=utf-8
