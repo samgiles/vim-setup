@@ -48,7 +48,6 @@ set shiftwidth=8
 set smarttab
 set expandtab
 
-set bomb
 set fileencoding=utf-8
 
 set spelllang=en_gb
