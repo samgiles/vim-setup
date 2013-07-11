@@ -32,6 +32,7 @@ nmap <F5> :TagbarShowTag<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
 nmap <F1> <Esc>
+nmap ! :!
 
 let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
