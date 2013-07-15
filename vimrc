@@ -1,4 +1,15 @@
 set nocp
+
+fu! GstatusToggle()
+        if join(filter(map(filter(range(0, bufnr('$')), 'bufwinnr(v:val)>=0'), 'bufname(v:val) == ".git/index"'), 'v:val>0')) == 1
+                exe 'bd '. join(filter(map(copy(range(1, bufnr('$'))), 'bufname(v:val)'), 'v:val =~ "^.git/index$"'), ' ')
+        else
+                Gstatus
+        endif
+endfunction
+
+command! -nargs=0 GstatusToggle call GstatusToggle()
+
 let g:loaded_syntastic_php_phpcs_checker=1
 let g:loaded_syntastic_php_phpmd_checker=1
 execute pathogen#infect()
@@ -22,6 +33,10 @@ let g:phpqa_messdetector_ruleset = "~/bin/phpmd-src/phpmd.xml"
 " Disable markdown folding
 let g:vim_markdown_folding_disabled=1
 
+if executable('ag')
+        let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
 
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -29,6 +44,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nu
 nmap <F4> :TagbarToggle<CR>
 nmap <F5> :TagbarShowTag<CR>
+nmap <F3> :GstatusToggle<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <C-0> :NERDTreeTabsToggle<CR>
 nmap <F1> <Esc>
@@ -44,6 +60,7 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 2
 
+<<<<<<< HEAD
 " tab spacing
 set tabstop=2
 set shiftwidth=2
