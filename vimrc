@@ -44,12 +44,16 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 2
 
-set tabstop=8
-set shiftwidth=8
+" tab spacing
+set tabstop=2
+set shiftwidth=2
+" set expandtab
 set smarttab
-set expandtab
 
-set bomb
+set laststatus=2
+set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
+let g:Powerline_symbols = 'fancy'
+
 set fileencoding=utf-8
 
 set spelllang=en_gb
