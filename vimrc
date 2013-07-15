@@ -59,10 +59,10 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 2
 
-set tabstop=8
-set shiftwidth=8
-set smarttab
+set autoindent
 set expandtab
+set softtabstop=4
+set shiftwidth=4
 
 set fileencoding=utf-8
 
