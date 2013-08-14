@@ -60,7 +60,6 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 2
 
-<<<<<<< HEAD
 " tab spacing
 set tabstop=2
 set shiftwidth=2
@@ -89,3 +88,7 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 noremap <up> <nop>
+
+noremap <F9> :tabnext<CR>
+noremap <F8> :tabprevious<CR>
+noremap <F7> :tabnew<CR>
