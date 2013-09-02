@@ -92,3 +92,5 @@ noremap <up> <nop>
 noremap <F9> :tabnext<CR>
 noremap <F8> :tabprevious<CR>
 noremap <F7> :tabnew<CR>
+
+set nofoldenable
