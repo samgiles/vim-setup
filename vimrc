@@ -8,6 +8,11 @@ fu! GstatusToggle()
         endif
 endfunction
 
+fu! ClearRegister(register)
+	exe 'let @'.register.' = ""'
+endfunction
+
+command! -nargs=1 Clrr call ClearRegister(<f-args>)
 command! -nargs=0 GstatusToggle call GstatusToggle()
 
 let g:loaded_syntastic_php_phpcs_checker=1
@@ -61,10 +66,13 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 2
 
 " tab spacing
-set tabstop=2
-set shiftwidth=2
-" set expandtab
-set smarttab
+set noexpandtab 	" use tabs, not spaces
+set tabstop=8   	" tabstops of 8
+set shiftwidth=8	" indents of 8
+set textwidth=78  " screen in 80 columns wide, wrap at 78
+set autoindent smartindent              " turn on auto/smart indenting
+set smarttab                            " make <tab> and <backspace> smarter
+set backspace=eol,start,indent          " allow backspacing over indent, eol, & start
 
 set laststatus=2
 set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
