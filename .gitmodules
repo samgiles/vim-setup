@@ -67,3 +67,9 @@
 [submodule "bundle/PIV"]
 	path = bundle/PIV
 	url = https://github.com/spf13/PIV.git
+[submodule "bundle/vim-localvimrc"]
+	path = bundle/vim-localvimrc
+	url = https://github.com/embear/vim-localvimrc
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = git://github.com/klen/python-mode.git
