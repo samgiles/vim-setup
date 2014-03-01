@@ -8,6 +8,10 @@ fu! GstatusToggle()
         endif
 endfunction
 
+if filereadable(".vim.custom")
+    so .vim.custom
+endif
+
 fu! ClearRegister(register)
 	exe 'let @'.register.' = ""'
 endfunction
@@ -21,8 +25,8 @@ execute pathogen#infect()
 syntax enable
 
 " Change to light to change to solarized light
-set background=dark
-colorscheme solarized
+"set background=light
+"colorscheme solarized
 
 filetype plugin indent on
 
@@ -66,9 +70,11 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 2
 
 " tab spacing
-set noexpandtab 	" use tabs, not spaces
-set tabstop=8   	" tabstops of 8
-set shiftwidth=8	" indents of 8
+" Devving libsass
+" set noexpandtab 	" use tabs, not spaces
+set noexpandtab
+set tabstop=4   	" tabstops of 8
+set shiftwidth=4	" indents of 8
 set textwidth=78  " screen in 80 columns wide, wrap at 78
 set autoindent smartindent              " turn on auto/smart indenting
 set smarttab                            " make <tab> and <backspace> smarter
@@ -100,5 +106,9 @@ noremap <up> <nop>
 noremap <F9> :tabnext<CR>
 noremap <F8> :tabprevious<CR>
 noremap <F7> :tabnew<CR>
+
+noremap <C-j> :tabprevious<CR>
+noremap <C-k> :tabprevious<CR>
+noremap <C-n> :tabnew<CR>
 
 set nofoldenable
