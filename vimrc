@@ -42,6 +42,8 @@ let g:phpqa_messdetector_ruleset = "~/bin/phpmd-src/phpmd.xml"
 " Disable markdown folding
 let g:vim_markdown_folding_disabled=1
 
+let g:airline#extensions#tabline#enabled=1
+
 if executable('ag')
         let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
