@@ -84,7 +84,6 @@ set backspace=eol,start,indent          " allow backspacing over indent, eol, & 
 
 set laststatus=2
 set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
-let g:Powerline_symbols = 'fancy'
 
 set fileencoding=utf-8
 
@@ -97,6 +96,9 @@ noremap ; l
 noremap l k
 noremap k j
 noremap j h
+
+noremap <C-w> <C-w><C-w>
+
 
 " Learn vi properly
 nnoremap <up> <nop>
@@ -112,5 +114,9 @@ noremap <F7> :tabnew<CR>
 noremap <C-j> :tabprevious<CR>
 noremap <C-k> :tabprevious<CR>
 noremap <C-n> :tabnew<CR>
+
+inoremap <F1> <nop>
+nnoremap <F1> <nop>
+vnoremap <F1> <nop>
 
 set nofoldenable
