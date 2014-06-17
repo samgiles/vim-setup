@@ -76,3 +76,9 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/dart-vim-plugin"]
+	path = bundle/dart-vim-plugin
+	url = https://github.com/dart-lang/dart-vim-plugin.git
+[submodule "bundle/IndentConsistencyCop"]
+	path = bundle/IndentConsistencyCop
+	url = https://github.com/vim-scripts/IndentConsistencyCop.git
