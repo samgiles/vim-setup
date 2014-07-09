@@ -19,6 +19,7 @@ endfunction
 command! -nargs=1 Clrr call ClearRegister(<f-args>)
 command! -nargs=0 GstatusToggle call GstatusToggle()
 
+
 let g:loaded_syntastic_php_phpcs_checker=1
 let g:loaded_syntastic_php_phpmd_checker=1
 execute pathogen#infect()
@@ -88,7 +89,7 @@ set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
 set fileencoding=utf-8
 
 set spelllang=en_gb
-set spell
+set nospell
 
 noremap <Space> <Return>
 noremap ' :
@@ -108,8 +109,8 @@ nnoremap <right> <nop>
 noremap <up> <nop>
 
 noremap <F9> :tabnext<CR>
-noremap <F8> :tabprevious<CR>
-noremap <F7> :tabnew<CR>
+noremap <F7> :tabprevious<CR>
+noremap <F8> :tabnew<CR>
 
 noremap <C-j> :tabprevious<CR>
 noremap <C-k> :tabprevious<CR>
@@ -120,3 +121,19 @@ nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
 set nofoldenable
+
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-j> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-k> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-l> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-;> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-h> :TmuxNavigatePrevious<cr>
+
+noremap <C-m> :VimuxTogglePane<CR>
+
+autocmd VimEnter * :call VimuxRunCommand("cd. ")
+let NERDTreeIgnore = ['\.pyc$']
