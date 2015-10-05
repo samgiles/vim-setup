@@ -73,12 +73,11 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 2
 
 " tab spacing
-" Devving libsass
-" set noexpandtab 	" use tabs, not spaces
-set noexpandtab
+" set noexpandtab 	" use spaces not tabs
+set expandtab
 set tabstop=4   	" tabstops of 8
 set shiftwidth=4	" indents of 8
-set textwidth=78  " screen in 80 columns wide, wrap at 78
+set textwidth=79  " screen in 80 columns wide, wrap at 78
 set autoindent smartindent              " turn on auto/smart indenting
 set smarttab                            " make <tab> and <backspace> smarter
 set backspace=eol,start,indent          " allow backspacing over indent, eol, & start
