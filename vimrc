@@ -19,26 +19,18 @@ endfunction
 command! -nargs=1 Clrr call ClearRegister(<f-args>)
 command! -nargs=0 GstatusToggle call GstatusToggle()
 
-
-let g:loaded_syntastic_php_phpcs_checker=1
-let g:loaded_syntastic_php_phpmd_checker=1
 execute pathogen#infect()
 syntax enable
 
 " Change to light to change to solarized light
 "set background=light
-"colorscheme solarized
+colorscheme solarized
 
 filetype plugin indent on
 
 " Remove whitespace on save from end of files
 autocmd BufWritePre * :%s/\s\+$//e
 set completeopt+=preview
-
-" Code sniffer stuff.
-" Standard for work...
-let g:phpqa_codesniffer_args = "--standard=Assanka"
-let g:phpqa_messdetector_ruleset = "~/bin/phpmd-src/phpmd.xml"
 
 " Disable markdown folding
 let g:vim_markdown_folding_disabled=1
@@ -49,6 +41,7 @@ if executable('ag')
         let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
+:set colorcolumn=100
 
 " Ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -147,6 +140,9 @@ function! AppendModeline()
   call append(line("$"), l:modeline)
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+let g:syntastic_java_javac_classpath = getcwd()."/src/main/java"
+let g:NERDTreeWinSize=80
 
 set modeline
 set modelines=5
