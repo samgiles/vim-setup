@@ -23,7 +23,7 @@ execute pathogen#infect()
 syntax enable
 
 " Change to light to change to solarized light
-"set background=light
+set background=dark
 colorscheme solarized
 
 filetype plugin indent on
